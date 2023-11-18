@@ -38,6 +38,17 @@ public class VeiculosApplication {
 
 			multa3.setValor(380F);
 			multaRepo.save(multa3);
+
+			List<Veiculo> veiculos = veiculoRepo.findAll();
+
+			System.out.println("- - - - - - - - - - - - - - - - - - - - -");
+			System.out.println();
+			for (Veiculo veiculo: veiculos){
+				System.out.println(veiculo);
+			}
+			System.out.println();
+			System.out.println("- - - - - - - - - - - - - - - - - - - - -");
+
 		};
 	}
 }
