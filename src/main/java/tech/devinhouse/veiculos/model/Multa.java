@@ -14,4 +14,54 @@ public class Multa {
     @ManyToOne
     @JoinColumn(name = "PLACA", referencedColumnName = "PLACA")
     private Veiculo veiculo;
+
+    public Multa() {
+    }
+
+    public Multa(String local, String motivo, Float valor, Veiculo veiculo) {
+        this.local = local;
+        this.motivo = motivo;
+        this.valor = valor;
+        this.veiculo = veiculo;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public Float getValor() {
+        return valor;
+    }
+
+    public void setValor(Float valor) {
+        this.valor = valor;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
 }
