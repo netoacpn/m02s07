@@ -9,6 +9,7 @@ import java.util.List;
 public class Veiculo {
     @Id
     private String placa;
+    @Enumerated(EnumType.STRING)
     private TipoVeiculo tipoVeiculo;
     private String nome;
     private Integer anoFabicacao;
@@ -16,6 +17,17 @@ public class Veiculo {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "veiculo")
     private List<Multa> multas;
+
+    public Veiculo() {
+    }
+
+    public Veiculo(String placa, TipoVeiculo tipoVeiculo, String nome, Integer anoFabicacao, String cor) {
+        this.placa = placa;
+        this.tipoVeiculo = tipoVeiculo;
+        this.nome = nome;
+        this.anoFabicacao = anoFabicacao;
+        this.cor = cor;
+    }
 
     public String getPlaca() {
         return placa;
